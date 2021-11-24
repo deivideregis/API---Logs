@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 
 namespace DevIO.APILogs.Configuration
 {
@@ -48,9 +49,9 @@ namespace DevIO.APILogs.Configuration
                     builder =>
                         builder
                             .WithMethods("GET")
-                            .WithOrigins("https://www.nortesys.com.br/")
+                            .WithOrigins("https://github.com/deivideregis/")
                             .SetIsOriginAllowedToAllowWildcardSubdomains()
-                            //.WithHeaders(HeaderNames.ContentType, "x-custom-header")
+                            .WithHeaders(HeaderNames.ContentType, "x-custom-header")
                             .AllowAnyHeader());
             });
 
