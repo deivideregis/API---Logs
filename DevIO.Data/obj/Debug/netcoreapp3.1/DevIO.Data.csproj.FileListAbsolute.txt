@@ -8,6 +8,5 @@ G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.Gener
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.AssemblyInfoInputs.cache
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.AssemblyInfo.cs
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.csproj.CoreCompileInputs.cache
-G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.csproj.CopyComplete
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.pdb
