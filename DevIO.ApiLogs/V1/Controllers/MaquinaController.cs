@@ -21,6 +21,7 @@ namespace DevIO.APILogs.V1.Controllers
         private readonly IMaquinaRepository _maquinaRepository;
         private readonly IMaquinaService _maquinaService;
         private readonly ILogRepository _logRepository;
+        private readonly ITipoSistemaRepository _tipoSistemaRepository;
         private readonly IMapper _mapper;
         
         public MaquinasController(IMaquinaRepository maquinaRepository,
@@ -28,12 +29,14 @@ namespace DevIO.APILogs.V1.Controllers
                                       IMaquinaService maquinaService,
                                       INotificador notificador,
                                       ILogRepository logRepository,
+                                      ITipoSistemaRepository tipoSistemaRepository,
                                       IUser user) : base(notificador, user)
         {
             _maquinaRepository = maquinaRepository;
             _mapper = mapper;
             _maquinaService = maquinaService;
             _logRepository = logRepository;
+            _tipoSistemaRepository = tipoSistemaRepository;
         }
 
         [AllowAnonymous]
@@ -98,6 +101,13 @@ namespace DevIO.APILogs.V1.Controllers
         public async Task<LogViewModel> ObterLogPorId(Guid id)
         {
             return _mapper.Map<LogViewModel>(await _logRepository.ObterPorId(id));
+        }
+
+        [AllowAnonymous]
+        [HttpGet("tiposistema")]
+        public async Task<IEnumerable<TipoSistemaViewModel>> ObterTodosTipoSistema()
+        {
+            return _mapper.Map<IEnumerable<TipoSistemaViewModel>>(await _tipoSistemaRepository.ObterTodosTipoSistema());
         }
 
         [ClaimsAuthorize("Maquina", "Atualizar")]
