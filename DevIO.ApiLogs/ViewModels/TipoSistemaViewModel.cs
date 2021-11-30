@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevIO.APILogs.ViewModels
 {
-    public class ListaSistemaViewModel
+    public class TipoSistemaViewModel
     {
         [Key]
         public Guid Id { get; set; }

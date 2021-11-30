@@ -13,10 +13,6 @@ namespace DevIO.APILogs.ViewModels
         public Guid Id { get; set; }        
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
-        [StringLength(3, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 3)]
-        public int Sistema { get; set; }
-
-        [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [StringLength(150, ErrorMessage = "O campo {0} precisa ter entre {2} e {1} caracteres", MinimumLength = 2)]
         public string NomeMaquina { get; set; }
 
@@ -32,6 +28,8 @@ namespace DevIO.APILogs.ViewModels
         
         //public Log Logs { get; set; }
         public IEnumerable<Log> Logs { get; set; }
+
+        public IEnumerable<TipoSistema> TipoSistema { get; set; }
 
     }
 }

@@ -11,7 +11,7 @@ namespace DevIO.APILogs.Configuration
             //ReverseMap: faz o mesmo (Maquima, MaquinaViewModel) ou (MaquinaViewModel, Maquina)
             CreateMap<Maquina, MaquinaViewModel>().ReverseMap();
             CreateMap<Log, LogViewModel>().ReverseMap();
-            CreateMap<ListaSistema, ListaSistemaViewModel>().ReverseMap();
+            CreateMap<TipoSistema, TipoSistemaViewModel>().ReverseMap();
         }
     }
 }

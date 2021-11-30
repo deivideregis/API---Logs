@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DevIO.Data.Mappings
 {
-    public class ListaSistemaMapping : IEntityTypeConfiguration<ListaSistema>
+    public class TipoSistemaMapping : IEntityTypeConfiguration<TipoSistema>
     {
-        public void Configure(EntityTypeBuilder<ListaSistema> builder)
+        public void Configure(EntityTypeBuilder<TipoSistema> builder)
         {
             builder.HasKey(p => p.Id);
 
@@ -16,9 +16,9 @@ namespace DevIO.Data.Mappings
 
             builder.Property(p => p.NomeSistema)
                 .IsRequired()
-                .HasColumnType("varchar(100)");
+                .HasColumnType("varchar(50)");
 
-            builder.ToTable("ListaSistema");
+            builder.ToTable("TipoSistema");
         }
     }
 }
