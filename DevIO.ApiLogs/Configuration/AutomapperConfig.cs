@@ -12,6 +12,9 @@ namespace DevIO.APILogs.Configuration
             CreateMap<Maquina, MaquinaViewModel>().ReverseMap();
             CreateMap<Log, LogViewModel>().ReverseMap();
             CreateMap<TipoSistema, TipoSistemaViewModel>().ReverseMap();
+
+            CreateMap<Log, LogViewModel>()
+            .ForMember(dest => dest.NomeMaquinaLog, opt => opt.MapFrom(src => src.Maquina.NomeMaquina));
         }
     }
 }

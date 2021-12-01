@@ -10,4 +10,3 @@ G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.Assem
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.csproj.CoreCompileInputs.cache
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.pdb
-G:\PROJETO\API\DevIO.ApiLogs\DevIO.Data\obj\Debug\netcoreapp3.1\DevIO.Data.csproj.CopyComplete
