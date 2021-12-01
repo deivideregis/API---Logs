@@ -21,7 +21,6 @@ namespace DevIO.Data.Context
 
         public DbSet<Maquina> Maquina { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             foreach (var property in modelBuilder.Model.GetEntityTypes()

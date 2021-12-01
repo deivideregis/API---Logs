@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevIO.Data.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20211119132245_Identity")]
+    [Migration("20211201024607_Identity")]
     partial class Identity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,8 +46,7 @@ namespace DevIO.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MaquinaId")
-                        .IsUnique();
+                    b.HasIndex("MaquinaId");
 
                     b.ToTable("Log");
                 });
@@ -78,11 +77,43 @@ namespace DevIO.Data.Migrations
                     b.ToTable("Maquina");
                 });
 
+            modelBuilder.Entity("DevIO.Business.Models.TipoSistema", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MaquinaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("NomeSistema")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("NumeroSistema")
+                        .IsRequired()
+                        .HasColumnType("varchar(3)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaquinaId");
+
+                    b.ToTable("TipoSistema");
+                });
+
             modelBuilder.Entity("DevIO.Business.Models.Log", b =>
                 {
                     b.HasOne("DevIO.Business.Models.Maquina", "Maquina")
-                        .WithOne("Logs")
-                        .HasForeignKey("DevIO.Business.Models.Log", "MaquinaId")
+                        .WithMany("Logs")
+                        .HasForeignKey("MaquinaId")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DevIO.Business.Models.TipoSistema", b =>
+                {
+                    b.HasOne("DevIO.Business.Models.Maquina", "Maquina")
+                        .WithMany("TipoSistema")
+                        .HasForeignKey("MaquinaId")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618
