@@ -31,6 +31,7 @@ G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.Asp
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
@@ -75,6 +76,7 @@ G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.Ide
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.Rest.ClientRuntime.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
@@ -129,5 +131,3 @@ G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs.pdb
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs.genruntimeconfig.cache
-G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
