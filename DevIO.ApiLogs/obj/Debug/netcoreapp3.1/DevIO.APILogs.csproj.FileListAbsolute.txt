@@ -131,3 +131,4 @@ G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs.dll
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs.pdb
 G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs.genruntimeconfig.cache
+G:\PROJETO\API\DevIO.ApiLogs\DevIO.APILogs\obj\Debug\netcoreapp3.1\DevIO.APILogs.csproj.CopyComplete
