@@ -19,25 +19,6 @@ namespace DevIO.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DevIO.Business.Models.ListaSistema", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("NomeSistema")
-                        .IsRequired()
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<string>("NumeroSistema")
-                        .IsRequired()
-                        .HasColumnType("varchar(3)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ListaSistema");
-                });
-
             modelBuilder.Entity("DevIO.Business.Models.Log", b =>
                 {
                     b.Property<Guid>("Id")
@@ -89,18 +70,47 @@ namespace DevIO.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(150)");
 
-                    b.Property<int>("Sistema")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("Maquina");
+                });
+
+            modelBuilder.Entity("DevIO.Business.Models.TipoSistema", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MaquinaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("NomeSistema")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("NumeroSistema")
+                        .IsRequired()
+                        .HasColumnType("varchar(3)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaquinaId");
+
+                    b.ToTable("TipoSistema");
                 });
 
             modelBuilder.Entity("DevIO.Business.Models.Log", b =>
                 {
                     b.HasOne("DevIO.Business.Models.Maquina", "Maquina")
                         .WithMany("Logs")
+                        .HasForeignKey("MaquinaId")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DevIO.Business.Models.TipoSistema", b =>
+                {
+                    b.HasOne("DevIO.Business.Models.Maquina", "Maquina")
+                        .WithMany("TipoSistema")
                         .HasForeignKey("MaquinaId")
                         .IsRequired();
                 });

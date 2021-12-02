@@ -37,6 +37,11 @@ namespace DevIO.Data.Repository
             return await DbSet.ToListAsync();
         }
 
+        public virtual async Task<List<TEntity>> ObterTodosTipoSistema()
+        {
+            return await DbSet.ToListAsync();
+        }
+
         public virtual async Task<List<TEntity>> ObterLista()
         {
             return await DbSet.ToListAsync();

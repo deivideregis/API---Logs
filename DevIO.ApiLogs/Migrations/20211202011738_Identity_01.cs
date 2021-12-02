@@ -2,7 +2,7 @@
 
 namespace DevIO.APILogs.Migrations
 {
-    public partial class Identity01 : Migration
+    public partial class Identity_01 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

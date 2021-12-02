@@ -5,8 +5,6 @@ namespace DevIO.Business.Models
 {
     public class Maquina : Entity
     {
-        public Sistema Sistema { get; set; }
-
         public string NomeMaquina { get; set; }
 
         public string IP { get; set; }
@@ -18,5 +16,7 @@ namespace DevIO.Business.Models
         /* EF Relation */
         //public Log Logs { get; set; }
         public IEnumerable<Log> Logs { get; set; }
+
+        public IEnumerable<TipoSistema> TipoSistema { get; set; }
     }
 }

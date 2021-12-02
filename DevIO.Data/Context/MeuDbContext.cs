@@ -17,9 +17,9 @@ namespace DevIO.Data.Context
 
         public DbSet<Log> Logs { get; set; }
 
-        public DbSet<Maquina> Maquina { get; set; }
+        public DbSet<TipoSistema> TipoSistema { get; set; }
 
-        public DbSet<ListaSistema> ListaSistemas { get; set; }
+        public DbSet<Maquina> Maquina { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

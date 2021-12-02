@@ -16,6 +16,45 @@ namespace DevIO.APILogs.Configuration
         {
             services.AddControllers();
 
+            //##################################################################################################
+
+            /*Corrigindo o erro “Um possível ciclo de objeto foi detectado” em diferentes versões do ASP.NET Core
+
+                Para corrigir o erro:
+
+                System.Text.Json.JsonException: Um possível ciclo de objeto foi detectado. Isso pode ser devido a um ciclo ou se a profundidade do objeto for maior do que a profundidade máxima permitida de 32. Considere o uso de ReferenceHandler.Preserve em JsonSerializerOptions para oferecer suporte a ciclos.
+
+                Você tem pelo menos duas opções:
+
+                1)Evitando referências circulares
+                2)Ignorando referências circulares
+
+                Vou assumir que a opção 1 (que geralmente é ideal) não é viável para você.
+
+                A opção 2 é literalmente uma pequena instrução na classe Startup, no método ConfigureServices (isso é para ASP.NET Core 6+ ):
+
+                services.AddControllers().AddJsonOptions(x =>
+                                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+                Se você usa ASP.NET Core 5 :
+
+                services.AddControllers().AddJsonOptions(x =>
+                   x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+
+                Se estiver usando ASP.NET Core 3.1 ou menos , você pode fazer o seguinte:
+
+                Instale a biblioteca: Microsoft.AspNetCore.Mvc.NewtonsoftJson (instale a versão correspondente, se você tiver ASP.NET Core 3.1, instale a versão 3.1 da biblioteca)
+
+                Então, em ConfigureServices:
+
+                services.AddControllers().AddNewtonsoftJson(x =>
+                 x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); */
+
+            services.AddControllers().AddNewtonsoftJson(x =>
+            x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            //###################################################################################################
+
             services.AddApiVersioning(options =>
             {
                 options.AssumeDefaultVersionWhenUnspecified = true;

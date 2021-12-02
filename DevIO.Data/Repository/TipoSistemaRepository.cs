@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace DevIO.Data.Repository
 {
-    public class ListaSistemaRepository : Repository<ListaSistema>
+    public class TipoSistemaRepository : Repository<TipoSistema>
     {
-        public ListaSistemaRepository(MeuDbContext context) : base(context) { }
+        public TipoSistemaRepository(MeuDbContext context) : base(context) { }
 
-        public async Task<ListaSistema> ObterListaSistema(Guid id)
+        public async Task<TipoSistema> ObterTipoSistema(Guid id)
         {
-            return await Db.ListaSistemas.AsNoTracking()
+            return await Db.TipoSistema.AsNoTracking()
                 .Include(c => c.Id)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
