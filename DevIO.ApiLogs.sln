@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIO.Data", "DevIO.Data\DevIO.Data.csproj", "{F5909163-9084-437E-8B98-3FDFDC3E6466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIO.Data", "DevIO.Data\DevIO.Data.csproj", "{F5909163-9084-437E-8B98-3FDFDC3E6466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIO.Business", "DevIO.Business\DevIO.Business.csproj", "{82B9CECD-5373-4772-8D86-9703E1EE5C3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIO.Business", "DevIO.Business\DevIO.Business.csproj", "{82B9CECD-5373-4772-8D86-9703E1EE5C3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIO.APILogs", "DevIO.APILogs\DevIO.APILogs.csproj", "{1B5A40FC-0AE8-4827-BC08-DAC3240D5D4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIO.APILogs", "DevIO.APILogs\DevIO.APILogs.csproj", "{1B5A40FC-0AE8-4827-BC08-DAC3240D5D4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentacao", "Documentacao", "{0C9601CE-5EBD-45E3-A589-607AAFF2D82A}"
+	ProjectSection(SolutionItems) = preProject
+		Migrate.txt = Migrate.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

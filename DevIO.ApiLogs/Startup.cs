@@ -24,9 +24,13 @@ namespace DevIO.APILogs
                 .AddJsonFile($"appsettings.{hostEnvironment.EnvironmentName}.json", true, true)
                 .AddEnvironmentVariables();
 
-            if (hostEnvironment.IsDevelopment())
+            //Para não deixar endereço de conexão exposto no Github para outros acessarem o banco de dados
+            //altere o arquivo de conexão para a secret do arquivo json: appsettings.Production/opção Gerenciar Segredos do usuários
+            //botão direito do mouseno projeto: AspNetCoreIdentity
+            //vai gerar um arquivo 'secret.json' cola o endereço da conexão
+            //vai ficar local essa configuração da conexão
+            if (hostEnvironment.IsProduction())
             {
-                //incluso: "DevIO.APILogs.csproj" => <UserSecretsId>7dab9b15-1049-45cc-9427-5970888e32a4</UserSecretsId>
                 builder.AddUserSecrets<Startup>();
             }
 

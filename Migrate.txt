@@ -1,0 +1,5 @@
+Add-Migration Inicial -StartupProject DevIO.APILogs -Project DevIO.APILogs -Context ApplicationDbContext -Verbose
+update-database -StartupProject DevIO.APILogs -Project DevIO.APILogs -Context ApplicationDbContext -Verbose
+
+Add-Migration Inicial -StartupProject DevIO.APILogs -Project DevIO.Data -Context MeuDbContext -Verbose
+update-database -StartupProject DevIO.APILogs -Project DevIO.Data -Context MeuDbContext -Verbose
